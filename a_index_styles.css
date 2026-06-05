@@ -1,0 +1,406 @@
+
+:root {
+    --orange: #FF6A00;
+    --white: #ffffff;
+    --black: #000000;
+   
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background: linear-gradient(135deg, #000000, #111111);
+    color: var(--white);
+   
+}
+
+/* NAVBAR */
+header {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+.nav-logo { height: 50px; }
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.nav-links a:hover { color: var(--orange); }
+header .book-btn {
+    background: var(--orange);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    
+}
+header .book-btn:hover { color: var(--black); }
+
+
+/* HERO SECTION  */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    color: white;
+}
+
+/* Background video */
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Text content */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 20px;
+}
+
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45); 
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* ABOUT ME SECTION */
+.about-container {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 60px auto;
+}
+
+.about-image img {
+    width: 400px; 
+    border-radius: 25px;
+    box-shadow: 0 0 30px var(--orange);
+}
+
+.about-text {
+    max-width: 700px;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--white);
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+/* SECTIONS */
+section { padding: 120px 60px; }
+h2 {
+    font-size: 3rem;
+    color: var(--orange);
+    text-align: center;
+    margin-bottom: 50px;
+}
+.section-content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+.card {
+    background: rgba(255,255,255,0.05);
+    border-radius: 25px;
+    padding: 20px;
+    width: 300px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.2);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover { transform: scale(1.05); box-shadow: 0 0 25px var(--orange);}
+.card img { width: 100px; margin-bottom: 20px; }
+.card p { color: var(--white); }
+
+/* VIDEO GALLERY */
+.video-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+.video-gallery label.thumb {
+    display: block;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.video-gallery label.thumb:hover { transform: scale(1.05); box-shadow: 0 0 25px var(--orange);}
+.video-gallery video {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    pointer-events: none;
+}
+.play-overlay {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: var(--orange);
+    pointer-events: none;
+    text-shadow: 0 0 10px #000;
+}
+
+/* HIDDEN CHECKBOX */
+.video-toggle { display: none; }
+
+/* VIDEO POPUP */
+.video-popup {
+    position: fixed;
+    inset: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(15px);
+    z-index: 500;
+    padding: 20px;
+}
+.video-toggle:checked + label + .video-popup { display: flex; }
+.popup-content {
+    width: 90%;
+    max-width: 700px;
+    max-height: 80vh;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(25px);
+    border-radius: 25px;
+    padding: 20px;
+    border: 1px solid rgba(255,255,255,0.25);
+    box-shadow: 0 0 30px var(--orange);
+}
+.popup-content video {
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+    border-radius: 15px;
+}
+.close-popup {
+    position: absolute;
+    top: 80px;
+    right: 40px;
+    font-size: 2.5rem;
+    color: var(--white);
+    cursor: pointer;
+    text-decoration: none;
+}
+.close-popup:hover { color: var(--orange); text-shadow: 0 0 15px var(--orange); }
+
+.unmute-btn {
+    margin-top: 10px;
+    background: var(--orange);
+    border: none;
+    color: var(--white);
+    font-size: 1rem;
+    padding: 5px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.unmute-btn:hover { background: var(--blue-electric); color: var(--black); }
+
+/* RESPONSIVE */
+@media(max-width: 768px){
+    .popup-content { width: 90%; }
+    .hero h1 { font-size: 3rem; }
+    .hero p { font-size: 1.2rem; }
+    .nav-links { display: none; }
+}
+/* TRAINING PHILOSOPHY */
+#training-philosophy {
+  position: relative;
+  width: 100%;
+  min-height: 600px; 
+  background: url('Images/GH_on_the_wall.png') no-repeat center center;
+  background-size: cover;
+  color: var(--white);
+  overflow: hidden;
+}
+
+#training-philosophy .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.75); 
+  z-index: 1;
+}
+
+#training-philosophy .container {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 40px;
+  z-index: 2;
+  text-align: left;
+  line-height: 1.9;
+  font-size: 1.15rem;
+}
+
+#training-philosophy h2 {
+  color: var(--orange);
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.8rem;
+}
+
+#training-philosophy .philosophy-text h3,
+#training-philosophy .philosophy-text h4 {
+  color: var(--orange);
+  margin-bottom: 15px;
+}
+
+#training-philosophy .philosophy-text p,
+#training-philosophy .philosophy-text li {
+  margin-bottom: 20px; 
+}
+
+#training-philosophy .philosophy-text ul {
+  list-style: none;
+  padding-left: 20px;
+}
+
+#training-philosophy .philosophy-text li::before {
+  content: "• ";
+  color: var(--orange);
+  font-weight: bold;
+}
+
+#training-philosophy .philosophy-text li {
+  margin-bottom: 15px;
+  font-weight: normal;
+}
+
+
+/* WHY CHOOSE ME */
+.why-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 60px auto;
+    flex-wrap: wrap;
+}
+
+.why-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    padding: 30px;
+    border-radius: 25px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(0,0,0,0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 50px var(--orange);
+}
+
+.why-card img {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+.why-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--orange);
+}
+
+.why-card p {
+    font-size: 1rem;
+    color: var(--white);
+    line-height: 1.5;
+}
+
+/* CONTACT US SECTION - FULL WIDTH */
+.contact-us {
+  background-color: #f46b0f; 
+  color: black; 
+  width: 100%;
+  padding: 60px 20px;
+  text-align: center;
+}
+.contact-us .contact-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.8;
+
+}
+
+.contact-us h2 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: #111111;
+}
+
+.contact-us p {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  margin: 10px 0;
+}
+
+.contact-us a {
+  color: black;
+  text-decoration: underline;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.contact-us a:hover {
+  color: #333; 
+}
+

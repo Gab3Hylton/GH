@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GH Basketball Training | Coach Gabe</title>
+<link rel="stylesheet" href="a_index_styles.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <div class="logo">
+        <img src="Images/GH_logo.png" alt="GH Basketball Logo" class="nav-logo">
+    </div>
+    <nav class="nav-links">
+        <a href="1ghtriaing_index.html">Home</a>
+        <a href="2plans_pricing.html">Plans & Pricing</a>
+        <a href="3booking.html">Booking</a>
+        <a href="4learn_more.html">Learn More</a>
+    </nav>
+    <a href="booking.html" class="book-btn">Book Now</a>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <video autoplay muted loop playsinline class = "hero-video">
+        <source src ="Images/Slowmovid.mp4.mp4" type="video/mp4">
+    </video>
+    <div class = "hero-content">
+        <h1>Coach Gabe Presents <br>GH TRAINING<sup>®</sup> </h1>
+        <p>Professional basketball training designed to elevate your game. Strength, skill, and mindset combined for peak performance.</p>
+        </div>
+</section>
+
+<!-- ABOUT ME -->
+<section id="about">
+    <h2>About Me</h2>
+    <div class="about-container">
+        <div class="about-image">
+            <img src="Images/Headshot.PNG" alt="Coach Gabe">
+        </div>
+        <div class="about-text">
+            <p>Coach Gabe is a dedicated professional with over 10 years of basketball training experience. Focused on individual growth and team success, he combines skill development, strength conditioning, and mental training to help athletes reach their peak potential. Passionate about basketball development, skill mastery, and mentoring athletes to reach their maximum potential, Coach Gabe is committed to elevating your game to the next level.</p>
+        </div>
+    </div>
+</section>
+
+<!-- TRAINING PHILOSOPHY -->
+<section id="training-philosophy">
+  <div class="overlay"></div> <!-- for dark overlay -->
+  <div class="container">
+    <h2>My Training Philosophy</h2>
+    <div class="philosophy-text">
+      <h3>PLAYER DEVELOPMENT</h3>
+      <p>At the core of GH Trainings are innovative coaching methods that have been revolutionizing player development for years. Philosophies are centered around skill acquisition science, detailed movement training, deep dives into player psychology, and integrating perspectives from basketball cultures all around the world to build highly skilled and adaptable athletes and humans.</p>
+      
+      <h4>Core principles</h4>
+      <ul>
+        <li><strong>Hard work and effort:</strong> Maximum effort is non-negotiable; a strong work ethic is the cornerstone of respect and improvement.</li>
+        <li><strong>Practice makes perfect:</strong> Skills are practiced correctly to build good habits, not just playing games.</li>
+        <li><strong>Skill and decision-making:</strong> Training connects skills with decision-making in game-like scenarios for effective learning.</li>
+        <li><strong>Game-specific conditioning:</strong> Conditioning integrated into gameplay improves skills and endurance simultaneously.</li>
+        <li><strong>Individual and team development:</strong> Growth happens individually but within the context of team play.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE ME -->
+<section id="why-choose-me">
+    <h2>Why Choose Me</h2>
+    <div class="why-container">
+        <div class="why-card">
+            <img src="Images/GH_logo.png" alt="Experience Icon">
+            <h3>Proven Experience</h3>
+            <p>With over 10 years of basketball coaching, Coach Gabe has developed top-tier athletes by combining innovative techniques with personalized guidance.</p>
+        </div>
+        <div class="why-card">
+            <img src="Images/GH_logo.png" alt="Philosophy Icon">
+            <h3>Unique Philosophy</h3>
+            <p>Our training emphasizes skill acquisition science, decision-making, and game-specific conditioning to ensure comprehensive player development.</p>
+        </div>
+        <div class="why-card">
+            <img src="Images/GH_logo.png" alt="Results Icon">
+            <h3>Results Driven</h3>
+            <p>Focused on measurable improvements, every session is designed to increase skill, confidence, and competitive performance on the court.</p>
+        </div>
+    </div>
+</section>
+
+<!-- VIDEO GALLERY -->
+<section id="training">
+    <h2>Training Highlights</h2>
+    <div class="video-gallery">
+
+        <!-- VIDEO 1 -->
+        <input type="checkbox" id="video1-toggle" class="video-toggle">
+        <label for="video1-toggle" class="thumb">
+            <video src="Images/Training Video1.MOV" muted></video>
+            <span class="play-overlay">▶</span>
+        </label>
+        <div class="video-popup">
+            <label for="video1-toggle" class="close-popup">✕</label>
+            <div class="popup-content">
+                <video src="Images/Training Video1.MOV" controls autoplay muted></video>
+                <button class="unmute-btn" onclick="this.previousElementSibling.muted=false; this.style.display='none'">🔊 Unmute</button>
+            </div>
+        </div>
+
+        <!-- VIDEO 2 -->
+        <input type="checkbox" id="video2-toggle" class="video-toggle">
+        <label for="video2-toggle" class="thumb">
+            <video src="Images/Training Video2.MOV" muted></video>
+            <span class="play-overlay">▶</span>
+        </label>
+        <div class="video-popup">
+            <label for="video2-toggle" class="close-popup">✕</label>
+            <div class="popup-content">
+                <video src="Images/Training Video2.MOV" controls autoplay muted></video>
+                <button class="unmute-btn" onclick="this.previousElementSibling.muted=false; this.style.display='none'">🔊 Unmute</button>
+            </div>
+        </div>
+
+        <!-- VIDEO 3 -->
+        <input type="checkbox" id="video3-toggle" class="video-toggle">
+        <label for="video3-toggle" class="thumb">
+            <video src="Images/Training Video3.MOV" muted></video>
+            <span class="play-overlay">▶</span>
+        </label>
+        <div class="video-popup">
+            <label for="video3-toggle" class="close-popup">✕</label>
+            <div class="popup-content">
+                <video src="Images/Training Video3.MOV" controls autoplay muted></video>
+                <button class="unmute-btn" onclick="this.previousElementSibling.muted=false; this.style.display='none'">🔊 Unmute</button>
+            </div>
+        </div>
+
+        <!-- VIDEO 4 -->
+        <input type="checkbox" id="video4-toggle" class="video-toggle">
+        <label for="video4-toggle" class="thumb">
+            <video src="Images/Training Video4.MOV" muted></video>
+            <span class="play-overlay">▶</span>
+        </label>
+        <div class="video-popup">
+            <label for="video4-toggle" class="close-popup">✕</label>
+            <div class="popup-content">
+                <video src="Images/Training Video4.MOV" controls autoplay muted></video>
+                <button class="unmute-btn" onclick="this.previousElementSibling.muted=false; this.style.display='none'">🔊 Unmute</button>
+            </div>
+        </div>
+
+    </div>
+ <!-- CONTACT US SECTION -->
+<section class="contact-us">
+  <h2>CONTACT US</h2>
+  <div class="contact-content">
+    <p><strong>Email:</strong> <a href="mailto:gabebuziness@gmail.com">GABEBUZINESS@GMAIL.COM</a></p>
+    <p><strong>Phone:</strong> <a href="tel:+16477093901">(647) 709-3901</a></p>
+    <p><strong>Instagram:</strong> <a href="https://www.instagram.com/coach_gab3/" target="_blank">@Coach_Gabe</a> | <a href="https://www.instagram.com/oakvillepanther/" target="_blank">Oakville Panther Basketball Club</a></p>
+</div>
+<footer class="site-footer">
+    <p>© 2025 GH Basketball Training. All Rights Reserved.</p>
+</footer> 
+
+
+  
+</section>
+
+
+
+
+</body>
+</html>
