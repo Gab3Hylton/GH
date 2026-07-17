@@ -150,3 +150,158 @@ button:hover {
 .contact-us a:hover {
   color: #333; 
 }
+
+/* GOOGLE CALENDAR BOOKING SECTION */
+
+.booking-section {
+  min-height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  background-color: #0e0d0d;
+}
+
+.booking-card {
+  width: 100%;
+  max-width: 850px;
+  padding: 55px;
+  background-color: #3f3e3e;
+  border-radius: 22px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+.booking-label {
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.booking-card h1 {
+  margin: 0 0 18px;
+  font-size: 2.6rem;
+  line-height: 1.15;
+}
+
+.booking-intro {
+  max-width: 650px;
+  margin: 0 auto 40px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #ece5e5;
+}
+
+.booking-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 40px;
+}
+
+.booking-detail {
+  padding: 22px 18px;
+  background-color: #0c0a0a;
+  border-radius: 14px;
+}
+
+.booking-detail h2 {
+  margin: 0 0 10px;
+  font-size: 1.05rem;
+}
+
+.booking-detail p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #666666;
+}
+
+.google-booking-btn {
+  display: inline-block;
+  padding: 16px 30px;
+  background-color: #111111;
+  color: #f0721e;
+  border-radius: 9px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.google-booking-btn:hover {
+  background-color: #333333;
+  transform: translateY(-2px);
+}
+
+.google-booking-btn:focus {
+  outline: 3px solid #b65f5f;
+  outline-offset: 4px;
+}
+
+.booking-note {
+  margin: 18px 0 0;
+  font-size: 0.82rem;
+  color: #777777;
+}
+
+/* TABLETS */
+
+@media screen and (max-width: 768px) {
+
+  .booking-section {
+    padding: 55px 18px;
+  }
+
+  .booking-card {
+    padding: 38px 24px;
+  }
+
+  .booking-card h1 {
+    font-size: 2rem;
+  }
+
+  .booking-details {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .booking-detail {
+    padding: 18px;
+  }
+}
+
+/* PHONES */
+
+@media screen and (max-width: 480px) {
+
+  .booking-section {
+    min-height: auto;
+    padding: 40px 14px;
+  }
+
+  .booking-card {
+    padding: 30px 18px;
+    border-radius: 16px;
+  }
+
+  .booking-card h1 {
+    font-size: 1.7rem;
+  }
+
+  .booking-intro {
+    margin-bottom: 28px;
+    font-size: 0.95rem;
+  }
+
+  .google-booking-btn {
+    display: block;
+    width: 100%;
+    padding: 15px 12px;
+    box-sizing: border-box;
+  }
+}

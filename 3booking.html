@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Book a Session</title>
+  <title>Book a Session | GH Basketball Training</title>
 
   <link rel="stylesheet" href="booking_styles.css">
 </head>
@@ -15,102 +15,100 @@
   <nav>
     <div class="logo">
       <a href="index.html">
-        <img src="Images/GH_logo.png" alt="GH Basketball Training" />
+        <img
+          src="Images/GH_logo.png"
+          alt="GH Basketball Training"
+        >
       </a>
     </div>
 
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="2plans_pricing.html">Plans & Pricing</a></li>
-      <li><a href="3booking.html" class="active">Booking</a></li>
-      <li><a href="4learn_more.html">Learn More</a></li>
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+
+      <li>
+        <a href="2plans_pricing.html">Plans &amp; Pricing</a>
+      </li>
+
+      <li>
+        <a href="3booking.html" class="active">Booking</a>
+      </li>
+
+      <li>
+        <a href="4learn_more.html">Learn More</a>
+      </li>
     </ul>
 
-    <a href="3booking.html" class="book-now-btn">Book Now</a>
+    <a href="#booking-calendar" class="book-now-btn">
+      Book Now
+    </a>
   </nav>
 
   <main>
 
-    <form
-      action="https://formspree.io/f/mzdneegy"
-      method="POST"
-    >
-      <h2>Book Your Training Session</h2>
+    <section class="booking-section" id="booking-calendar">
 
-      <label for="name">Name</label>
-      <input
-        type="text"
-        id="name"
-        name="name"
-        required
-      >
+      <div class="booking-card">
 
-      <label for="email">Email</label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        required
-      >
+        <p class="booking-label">GH Basketball Training</p>
 
-      <label for="phone">Phone Number</label>
-      <input
-        type="tel"
-        id="phone"
-        name="phone"
-      >
+        <h1>Book Your Training Session</h1>
 
-      <label for="player-age">Player Age</label>
-      <input
-        type="number"
-        id="player-age"
-        name="player_age"
-        min="5"
-        max="99"
-      >
+        <p class="booking-intro">
+          Select an available date and time using our online booking
+          calendar. Once booked, you will receive a confirmation from
+          Google Calendar.
+        </p>
 
-      <label for="plan">Choose Plan</label>
-      <select id="plan" name="plan" required>
-        <option value="">Select a plan</option>
-        <option value="Newcomer Free Session">
-          Newcomer Free Session
-        </option>
-        <option value="Single Group Session">
-          Single Group Session
-        </option>
-        <option value="Four Group Sessions">
-          Four Group Sessions
-        </option>
-        <option value="Private Training">
-          Private Training
-        </option>
-      </select>
+        <div class="booking-details">
 
-      <label for="preferred-date">Preferred Training Date</label>
-      <input
-        type="date"
-        id="preferred-date"
-        name="preferred_date"
-      >
+          <div class="booking-detail">
+            <h2>Choose a Time</h2>
+            <p>
+              View the available training dates and select the time that
+              works best for you.
+            </p>
+          </div>
 
-      <label for="message">Message</label>
-      <textarea
-        id="message"
-        name="message"
-        rows="4"
-        placeholder="Tell me about the player's experience, goals, and availability."
-      ></textarea>
+          <div class="booking-detail">
+            <h2>Enter Player Details</h2>
+            <p>
+              Provide the player’s age, experience, training plan and
+              goals during booking.
+            </p>
+          </div>
 
-      <input
-        type="hidden"
-        name="_subject"
-        value="New GH Basketball Training Booking"
-      >
+          <div class="booking-detail">
+            <h2>Receive Confirmation</h2>
+            <p>
+              Your appointment will be added to the calendar and a
+              confirmation will be sent to your email.
+            </p>
+          </div>
 
-      <button type="submit">Submit Booking</button>
-    </form>
+        </div>
+
+        <a
+          href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ23EicYu56PKG60td5w2Za_0SHCqNzUzjBaaFXq-eXZ-i1eZYrHPgpEMfHfgSUg4tl5Ghd0i7S5?gv=true"
+          class="google-booking-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Available Dates and Times
+        </a>
+
+        <p class="booking-note">
+          You will be taken to the secure GH Basketball Training booking
+          page powered by Google Calendar.
+        </p>
+
+      </div>
+
+    </section>
 
     <section class="contact-us">
+
       <h2>CONTACT US</h2>
 
       <div class="contact-container">
@@ -152,6 +150,7 @@
         </p>
 
       </div>
+
     </section>
 
   </main>
