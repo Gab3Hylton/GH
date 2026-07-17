@@ -10,16 +10,31 @@
 
 <!-- NAVBAR -->
 <header>
-    <div class="logo">
-        <img src="Images/GH_logo.png" alt="GH Basketball Logo" class="nav-logo">
-    </div>
-    <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="2plans_pricing.html">Plans & Pricing</a>
-        <a href="3booking.html">Booking</a>
-        <a href="4learn_more.html">Learn More</a>
-    </nav>
-    <a href="3booking.html" class="book-btn">Book Now</a>
+  <a href="index.html">
+    <img
+      src="Images/GH_logo.png"
+      alt="GH Basketball Training"
+      class="nav-logo"
+    >
+  </a>
+
+  <button
+    class="menu-toggle"
+    type="button"
+    aria-label="Open navigation menu"
+    aria-expanded="false"
+  >
+    ☰
+  </button>
+
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="2plans_pricing.html">Plans & Pricing</a>
+    <a href="3booking.html">Booking</a>
+    <a href="4learn_more.html">Learn More</a>
+  </nav>
+
+  <a href="3booking.html" class="book-btn">Book Now</a>
 </header>
 
 <!-- HERO -->
@@ -172,6 +187,35 @@
 
 
 
+<script>
+  const menuButton = document.querySelector(".menu-toggle");
+  const navigation = document.querySelector(".nav-links");
 
+  menuButton.addEventListener("click", function () {
+    navigation.classList.toggle("open");
+
+    const menuIsOpen = navigation.classList.contains("open");
+
+    menuButton.textContent = menuIsOpen ? "✕" : "☰";
+    menuButton.setAttribute("aria-expanded", menuIsOpen);
+    menuButton.setAttribute(
+      "aria-label",
+      menuIsOpen
+        ? "Close navigation menu"
+        : "Open navigation menu"
+    );
+  });
+
+  const navigationLinks = navigation.querySelectorAll("a");
+
+  navigationLinks.forEach(function (link) {
+    link.addEventListener("click", function () {
+      navigation.classList.remove("open");
+      menuButton.textContent = "☰";
+      menuButton.setAttribute("aria-expanded", "false");
+      menuButton.setAttribute("aria-label", "Open navigation menu");
+    });
+  });
+</script>
 </body>
 </html>
